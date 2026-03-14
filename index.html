@@ -80,12 +80,9 @@
             </div>
           </div>
 
-          <div class="hero-right" aria-label="Hero media preview">
-            <div class="photo-grid">
-              <div class="photo-tile"></div>
-              <div class="photo-tile"></div>
-              <div class="photo-tile"></div>
-              <div class="photo-tile"></div>
+          <div class="hero-right">
+            <div class="hero-image-wrap">
+              <img src="assets/images/hero pic.jpg" alt="Justin Kleyn hero portrait" class="hero-image" />
             </div>
           </div>
         </div>
@@ -101,32 +98,39 @@
           <h2>About me</h2>
         </div>
 
-        <div class="about-card">
-          <p class="about-lead">
-            Hi, I’m Justin — a 28 year old male Sydney-based UGC creator specialising in authentic lifestyle content
-            for brands across TikTok, Instagram and paid social.
-          </p>
+        <div class="about-grid">
+          <div class="about-text">
+            <p class="about-lead">
+              Hi, I’m Justin — a 28 year old Sydney-based UGC creator specialising in authentic
+              lifestyle content for brands across TikTok, Instagram and paid social.
+            </p>
 
-          <p>
-            My content blends clean visuals, natural storytelling and relatable everyday moments to
-            help brands create content that feels genuine rather than overly scripted. The goal is
-            simple: make brand content feel native to the platform and trustworthy to the viewer.
-          </p>
+            <p>
+              My content blends clean visuals, natural storytelling and relatable everyday moments
+              to help brands create content that feels genuine rather than overly scripted. The goal
+              is simple: make brand content feel native to the platform and trustworthy to the
+              viewer.
+            </p>
 
-          <p>
-            With a background in creative work, editing and content creation, I understand how to
-            turn a product into content that is polished, social-first and easy for brands to use
-            across organic and ad campaigns.
-          </p>
+            <p>
+              With a background in creative work, editing and content creation, I understand how to
+              turn a product into content that is polished, social-first and easy for brands to use
+              across organic and ad campaigns.
+            </p>
 
-          <div class="about-tags">
-            <span>lifestyle</span>
-            <span>tech</span>
-            <span>family content</span>
-            <span>parent content</span>
-            <span>fitness</span>
-            <span>productivity</span>
-            <span>men’s lifestyle</span>
+            <div class="about-tags">
+              <span>lifestyle</span>
+              <span>tech</span>
+              <span>family content</span>
+              <span>parent content</span>
+              <span>fitness</span>
+              <span>productivity</span>
+              <span>men’s lifestyle</span>
+            </div>
+          </div>
+
+          <div class="about-photo">
+            <img src="assets/images/About Me Pic.jpg" alt="Justin Kleyn UGC creator" />
           </div>
         </div>
       </div>
@@ -219,6 +223,84 @@
             </div>
             <h3 class="example-title">Sunset Lamp</h3>
           </div>
+
+          <div class="example-item">
+            <div class="phone-frame">
+              <div class="phone-screen">
+                <div class="video-card" data-video-card>
+                  <video
+                    class="ugc-video"
+                    playsinline
+                    preload="metadata"
+                    poster="assets/images/weekly-reset-cover.jpg"
+                    data-video
+                  >
+                    <source src="assets/videos/UGC Example - Weekly Reset.mp4" type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+
+                  <button class="video-play-button" type="button" aria-label="Play video" data-play>
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                      <path d="M8 5.5v13l10-6.5-10-6.5Z"></path>
+                    </svg>
+                  </button>
+
+                  <div class="video-controls">
+                    <input
+                      class="video-progress"
+                      type="range"
+                      min="0"
+                      max="100"
+                      value="0"
+                      step="0.1"
+                      aria-label="Video progress"
+                      data-progress
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <h3 class="example-title">Weekly Reset</h3>
+          </div>
+
+          <div class="example-item">
+            <div class="phone-frame">
+              <div class="phone-screen">
+                <div class="video-card" data-video-card>
+                  <video
+                    class="ugc-video"
+                    playsinline
+                    preload="metadata"
+                    poster="assets/images/mini-vlog-cover.jpg"
+                    data-video
+                  >
+                    <source src="assets/videos/UGC Example - Mini Vlog.mp4" type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+
+                  <button class="video-play-button" type="button" aria-label="Play video" data-play>
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                      <path d="M8 5.5v13l10-6.5-10-6.5Z"></path>
+                    </svg>
+                  </button>
+
+                  <div class="video-controls">
+                    <input
+                      class="video-progress"
+                      type="range"
+                      min="0"
+                      max="100"
+                      value="0"
+                      step="0.1"
+                      aria-label="Video progress"
+                      data-progress
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <h3 class="example-title">Mini Vlog</h3>
+          </div>
         </div>
       </div>
 
@@ -227,7 +309,7 @@
 
     <section id="contact" class="content-section contact-simple">
       <div class="container contact-container">
-        <h2 class="contact-title">Let's work together</h2>
+        <h2 class="contact-title">Let's work together!</h2>
 
         <div class="contact-list">
           <a class="contact-row" href="mailto:juzirl@outlook.com" aria-label="Email Justin">
@@ -238,6 +320,7 @@
             </svg>
             <span class="contact-pill">juzirl@outlook.com</span>
           </a>
+
           <a
             class="contact-row"
             href="https://instagram.com/juzirl"
@@ -267,7 +350,6 @@
             </svg>
             <span class="contact-pill">@juzirl</span>
           </a>
-
         </div>
       </div>
     </section>
