@@ -27,7 +27,7 @@ input {
 }
 
 .container {
-  max-width: 1100px;
+  max-width: 1180px;
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -105,12 +105,12 @@ input {
 
 .hero-left {
   flex: 1;
-  max-width: 560px;
+  max-width: 760px;
   text-align: left;
 }
 
 .hero-right {
-  flex: 1;
+  flex: 0 0 340px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -118,7 +118,8 @@ input {
 
 .hero-image-wrap {
   width: 100%;
-  max-width: 380px;
+  max-width: 340px;
+  aspect-ratio: 4 / 5;
   border-radius: 32px;
   overflow: hidden;
   box-shadow: 0 20px 44px rgba(43, 27, 17, 0.12);
@@ -129,7 +130,7 @@ input {
 .hero-image {
   display: block;
   width: 100%;
-  height: auto;
+  height: 100%;
   object-fit: cover;
 }
 
@@ -160,7 +161,7 @@ input {
   color: #7a6659;
   margin-top: 1.25rem;
   margin-bottom: 0;
-  max-width: 36rem;
+  max-width: 42rem;
 }
 
 .social-links {
@@ -278,7 +279,8 @@ h2 {
   color: #2b1b11;
 }
 
-h3 {
+h3,
+h4 {
   margin: 0;
 }
 
@@ -338,6 +340,20 @@ p {
   object-fit: cover;
   box-shadow: 0 18px 40px rgba(43, 27, 17, 0.12);
   border: 1px solid rgba(43, 27, 17, 0.1);
+}
+
+/* Portfolio subtitles */
+.portfolio-subtitle {
+  margin-top: 12px;
+  margin-bottom: 24px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #2b1b11;
+  letter-spacing: -0.02em;
+}
+
+.portfolio-subtitle:not(:first-of-type) {
+  margin-top: 56px;
 }
 
 /* Examples */
