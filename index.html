@@ -132,7 +132,40 @@
           </div>
 
           <div class="about-photo">
-            <img src="assets/images/About Me Pic.jpg" alt="Justin Kleyn UGC creator" />
+  <div class="about-media-wrap">
+    <div class="video-card about-video-card" data-video-card>
+      <video
+        class="about-media"
+        playsinline
+        preload="metadata"
+        poster="assets/images/About Me Pic.jpg"
+        data-video
+      >
+        <source src="assets/videos/About Me Video.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+
+      <button class="video-play-button" type="button" aria-label="Play video" data-play>
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M8 5.5v13l10-6.5-10-6.5Z"></path>
+        </svg>
+      </button>
+
+      <div class="video-controls">
+        <input
+          class="video-progress"
+          type="range"
+          min="0"
+          max="100"
+          value="0"
+          step="0.1"
+          aria-label="Video progress"
+          data-progress
+        />
+      </div>
+    </div>
+  </div>
+</div>
           </div>
         </div>
       </div>
@@ -299,7 +332,7 @@
           </div>
         </div>
 
-        <h3 class="portfolio-subtitle">Couple & Family Content</h3>
+        <h3 class="portfolio-subtitle">Couple &amp; Family Content</h3>
 
         <div class="examples-grid">
           <div class="example-item">
