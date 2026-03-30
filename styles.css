@@ -21,6 +21,38 @@ a {
   color: inherit;
 }
 
+.nav-link,
+.section-label,
+.portfolio-subtitle,
+.contact-title,
+.footer-links a,
+.about-lead,
+.example-title {
+  color: #2b1b11;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: #2b1b11;
+}
+
+/* Keep section tone differentiation */
+.hero {
+  background: #fff; /* bright white hero */
+}
+.content-section {
+  background: #f5f8ff; /* very light blue tint for main sections */
+}
+#about.content-section,
+#contact.content-section {
+  background: #f7f4ee; /* cream tone for about/contact */
+}
+.content-section.alt {
+  background: #f3e6d8; /* existing tan for example alternate sections */
+}
+
 button,
 input {
   font: inherit;
@@ -257,6 +289,33 @@ input {
   padding-top: 48px;
 }
 
+.video-examples-section {
+  background: #e7f1ff; /* different tone for video examples */
+}
+
+.brand-work-section {
+  background: #f3e6d8; /* brand work can remain tan if needed */
+}
+
+/* Headings in all sections */
+h1,
+h2,
+h3,
+h4 {
+  color: #2b1b11;
+}
+
+.nav-link,
+.section-label,
+.portfolio-subtitle,
+.contact-title,
+.footer-links a,
+.about-lead,
+.example-title,
+p {
+  color: #2b1b11;
+}
+
 .section-header {
   margin-bottom: 2rem;
 }
@@ -405,6 +464,15 @@ p {
   position: relative;
 }
 
+.brand-logo-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  position: relative;
+  z-index: 1;
+}
+
 .phone-frame::before {
   content: "";
   position: absolute;
@@ -550,12 +618,16 @@ p {
 /* Contact */
 .contact-simple {
   text-align: center;
-  padding-bottom: 72px;
+  padding: 72px 0;
+  background: #f9fafc; /* fill the whole section with light color */
 }
 
 .contact-container {
-  max-width: 1180px;
+  width: 100%;
+  max-width: none;
   margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
 }
 
 .contact-title {
@@ -647,11 +719,25 @@ p {
   margin-bottom: 28px;
 }
 
+/* Slightly larger visual baseline for orbitkey + scaled thesomewhereco */
+.brand-logo-wrap img.orbitkeylogo {
+  max-width: 188px !important;
+  height: auto !important;
+  opacity: 0.9;
+}
+
+.brand-logo-wrap img.thesomewherecologo {
+  max-width: 168px !important;
+  height: auto !important;
+  opacity: 0.9;
+}
+
 .brand-logo-wrap img {
-  max-width: 160px;
+  max-width: 188px;
   height: auto;
   opacity: 0.9;
 }
+
 /* Responsive */
 @media (max-width: 900px) {
   .hero-content {
