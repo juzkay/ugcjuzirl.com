@@ -168,11 +168,16 @@ input {
 
 .hero-eyebrow {
   margin: 0 0 1rem;
-  font-size: 0.8rem;
-  font-weight: 700;
-  letter-spacing: 0.14em;
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: #7a6659;
+  color: #2b1b11;
+  background: rgba(243, 210, 175, 0.32);
+  padding: 0.75rem 1rem;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
 }
 
 .hero-title {
@@ -287,6 +292,40 @@ input {
 .content-section.alt {
   background: #f3e6d8;
   padding-top: 48px;
+}
+
+.reviews-section {
+  background: #fdf8f1;
+}
+
+.reviews-grid {
+  display: grid;
+  gap: 18px;
+  margin-top: 24px;
+}
+
+.review-card {
+  width: 100%;
+  padding: 26px 28px;
+  border-radius: 28px;
+  background: #ffffff;
+  border: 1px solid rgba(43, 27, 17, 0.08);
+  box-shadow: 0 18px 40px rgba(43, 27, 17, 0.08);
+}
+
+.review-stars {
+  font-size: 1.1rem;
+  letter-spacing: 0.12em;
+  color: #d49f2e;
+  margin-bottom: 1rem;
+}
+
+.review-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  object-fit: cover;
 }
 
 .video-examples-section {
