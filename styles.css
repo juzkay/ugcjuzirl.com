@@ -181,14 +181,15 @@ input {
 }
 
 .hero-title {
-  font-family: "Sora", "Inter", sans-serif;
-  font-weight: 800;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
   line-height: 0.95;
-  letter-spacing: -0.05em;
+  letter-spacing: -5px;
   font-size: clamp(3.1rem, 7vw, 5.8rem);
   margin-bottom: 0;
   white-space: nowrap;
   color: #2b1b11;
+  text-transform: uppercase;
 }
 
 .hero-subtitle {
@@ -360,6 +361,10 @@ h2,
 h3,
 h4 {
   color: #2b1b11;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: -5px;
 }
 
 .nav-link,
