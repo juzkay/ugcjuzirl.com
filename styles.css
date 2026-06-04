@@ -210,6 +210,72 @@ input {
   margin-left: auto;
 }
 
+.brand-carousel {
+  margin-top: 1.75rem;
+  max-width: 100%;
+}
+
+.carousel-label {
+  margin-bottom: 0.9rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #2b1b11;
+  opacity: 0.85;
+}
+
+.carousel-track-wrapper {
+  overflow: hidden;
+  border-radius: 24px;
+  padding: 1rem 0;
+  background: rgba(253, 248, 241, 0.9);
+  border: 1px solid rgba(43, 27, 17, 0.08);
+}
+
+.carousel-track {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-left: 1.5rem;
+  animation: scrollBrands 28s linear infinite;
+}
+
+.brand-card {
+  flex: 0 0 auto;
+  min-width: 150px;
+  height: 88px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 18px;
+  border-radius: 20px;
+  border: 1px solid rgba(43, 27, 17, 0.08);
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 16px 38px rgba(43, 27, 17, 0.08);
+}
+
+.brand-card img {
+  max-height: 42px;
+  max-width: 100%;
+  opacity: 0.95;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.brand-card:hover img {
+  opacity: 1;
+  transform: scale(1.03);
+}
+
+@keyframes scrollBrands {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
 .social-link {
   width: 50px;
   height: 50px;
