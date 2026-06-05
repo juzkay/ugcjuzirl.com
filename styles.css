@@ -15,6 +15,7 @@ body {
   color: #2b1b11;
   background: #f6efe6;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 a {
@@ -187,7 +188,6 @@ input {
   letter-spacing: -5px;
   font-size: clamp(3.1rem, 7vw, 5.8rem);
   margin-bottom: 0;
-  white-space: nowrap;
   color: #2b1b11;
   text-transform: uppercase;
 }
@@ -872,6 +872,11 @@ p {
     flex-direction: column;
     text-align: center;
     gap: 32px;
+    padding-left: 16px;
+    padding-right: 16px;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
   }
 
   .hero-left {
@@ -897,6 +902,59 @@ p {
   .hero-image-wrap {
     max-width: 320px;
     margin: 0 auto;
+  }
+
+  /* ensure hero columns don't push layout on small phones */
+  .hero-left,
+  .hero-right {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .hero-eyebrow,
+  .hero-title,
+  .hero-subtitle {
+    max-width: 520px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* avoid animated carousel contributing to layout width on small screens */
+  /* Replace animated carousel with a static grid on small screens */
+  .carousel-track-wrapper {
+    padding: 0.5rem;
+    border-radius: 18px;
+    background: rgba(253, 248, 241, 0.9);
+  }
+
+  .carousel-track {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+    gap: 12px;
+    padding: 0.5rem;
+    align-items: center;
+    animation: none; /* disable scroll animation on small screens */
+    transform: none;
+  }
+
+  .brand-card {
+    flex: none;
+    min-width: 0;
+    height: 64px;
+    padding: 0 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255,255,255,0.95);
+    border-radius: 16px;
+  }
+
+  .brand-card img {
+    max-height: 36px;
+    width: auto;
+    height: auto;
+    max-width: 100%;
   }
 
   .about-grid {
@@ -1075,5 +1133,37 @@ p {
   .section-arrow {
     width: 36px;
     height: 36px;
+  }
+
+  /* further reduce carousel on narrow phones */
+  .carousel-track-wrapper {
+    padding: 0.4rem;
+    border-radius: 14px;
+  }
+  .carousel-track {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    gap: 10px;
+    padding: 0.4rem;
+    align-items: center;
+    animation: none;
+  }
+
+  .brand-card {
+    flex: none;
+    min-width: 0;
+    height: 56px;
+    padding: 0 10px;
+    border-radius: 12px;
+  }
+
+  .brand-card img {
+    max-height: 28px;
+  }
+}
+
+@media (min-width: 900px) {
+  .hero-title {
+    white-space: nowrap;
   }
 }
