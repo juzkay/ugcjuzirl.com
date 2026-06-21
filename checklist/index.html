@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Free UGC Checklist | Justin Kleyn</title>
+    <meta
+      name="description"
+      content="Download the free beginner UGC checklist after following @juzirl on Instagram."
+    />
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Sora:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <section class="hero hero-compact">
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-left">
+            <p class="hero-eyebrow">Free UGC resource</p>
+            <h1 class="hero-title">Beginner UGC Checklist</h1>
+            <p class="hero-subtitle">
+              Grab the step-by-step checklist every new creator needs.
+              <span class="follow-line">Follow @juzirl then download the PDF instantly.
+            </p>
+
+            <div class="hero-actions">
+              <a class="button button-primary" href="/assets/files/ugc-checklist.pdf" download>
+                Download checklist PDF
+              </a>
+              <a
+                class="button button-secondary"
+                href="https://instagram.com/juzirl"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Follow @juzirl
+              </a>
+            </div>
+          </div>
+
+          <div class="hero-right">
+            <div class="hero-image-wrap">
+              <img
+                src="/assets/images/hero-pic.jpg"
+                alt="Justin Kleyn hero portrait"
+                class="hero-image"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-links">
+          <a href="/index.html#top">Top</a>
+          <a href="/index.html#examples">Examples</a>
+          <a href="/index.html#about">About</a>
+          <a href="/index.html#contact">Work with me</a>
+        </div>
+        <div class="footer-copyright">© <span id="year"></span> Justin Kleyn</div>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const year = document.getElementById("year");
+        if (year) year.textContent = String(new Date().getFullYear());
+      });
+    </script>
+  </body>
+</html>
