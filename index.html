@@ -125,30 +125,9 @@
                     <img src="assets/images/logos/qomfort.webp" alt="Qomfort logo" />
                   </figure>
                   <figure class="brand-card">
-                    <img src="assets/images/logos/vitable.png" alt="Vitable logo" />
-                  </figure>
-                  <figure class="brand-card">
-                    <img src="assets/images/logos/senza.png" alt="Senza logo" />
-                  </figure>
-                  <figure class="brand-card">
-                    <img src="assets/images/logos/lucentglobe.png" alt="Lucent Globe logo" />
-                  </figure>
-                  <figure class="brand-card">
-                    <img src="assets/images/logos/surfshark.png" alt="Surfshark logo" />
-                  </figure>
-                  <figure class="brand-card">
                     <img src="assets/images/logos/peakme.png" alt="PeakMe logo" />
                   </figure>
                   <figure class="brand-card">
-                    <img src="assets/images/logos/pulsecharge.png" alt="Pulsecharge logo" />
-                  </figure>
-                  <figure class="brand-card">
-                    <img src="assets/images/logos/mooonpig.jpeg" alt="Mooonpig logo" />
-                  </figure>
-                  <figure class="brand-card">
-                    <img src="assets/images/logos/slendier.webp" alt="Slendier logo" />
-                  </figure>
-                  <figure class="brand-card">
                     <img src="assets/images/logos/vitable.png" alt="Vitable logo" />
                   </figure>
                   <figure class="brand-card">
@@ -156,6 +135,9 @@
                   </figure>
                   <figure class="brand-card">
                     <img src="assets/images/logos/lucentglobe.png" alt="Lucent Globe logo" />
+                  </figure>
+                  <figure class="brand-card">
+                    <img src="assets/images/logos/outin.png" alt="OutIn logo" />
                   </figure>
                 </div>
               </div>
@@ -261,6 +243,34 @@
     </div>
 
     <div class="examples-grid">
+      <!-- NEW VIDEO: OUTIN -->
+      <div class="example-item">
+        <div class="phone-frame">
+          <div class="phone-screen">
+            <div class="video-card" data-video-card>
+              <video
+                class="ugc-video"
+                playsinline
+                preload="metadata"
+                poster="assets/images/outin.png"
+                data-video
+              >
+                <source src="assets/videos/outin.mp4" type="video/mp4" />
+              </video>
+              <button class="video-play-button" type="button" data-play>
+                <svg viewBox="0 0 24 24">
+                  <path d="M8 5.5v13l10-6.5-10-6.5Z"></path>
+                </svg>
+              </button>
+              <div class="video-controls">
+                <input class="video-progress" type="range" min="0" max="100" value="0" step="0.1" data-progress />
+              </div>
+            </div>
+          </div>
+        </div>
+        <h4 class="example-title">OutIn</h4>
+      </div>
+
       <!-- NEW VIDEO: VITABLE -->
       <div class="example-item">
         <div class="phone-frame">
@@ -991,6 +1001,58 @@
             <p>Hi Justin! Absolutely love the video (AND B-ROLL). Thank you sooo sooo much! Also really appreciate the way you've segmented everything into folders!</p>
           </div>
         </div>
+
+        <div class="review-list" aria-label="Additional client reviews">
+          <article class="review-entry">
+            <div class="review-header">
+              <div>
+                <h3>Hercules Supplements</h3>
+                <p class="review-meta">Job ID 8462 • 10 Aug 2026</p>
+              </div>
+              <div class="review-stars" aria-label="Five star rating">★★★★★</div>
+            </div>
+
+            <p class="review-text">
+              Justin was great to work with! He delivered the content quickly and had great communication throughout the process. Would definitely recommend working with him!
+            </p>
+
+            <div class="review-action">
+              <a class="review-link" href="mailto:ugcjuzirl@outlook.com?subject=Review%20for%20Justin">Ask us to review this</a>
+            </div>
+          </article>
+
+          <article class="review-entry">
+            <div class="review-header">
+              <div>
+                <h3>Milkman Grooming Co</h3>
+                <p class="review-meta">Job ID 8422 • 10 Aug 2026</p>
+              </div>
+              <div class="review-stars" aria-label="Five star rating">★★★★★</div>
+            </div>
+
+            <p class="review-text">Justin did a fabulous job. Would love to work with him again.</p>
+
+            <div class="review-action">
+              <a class="review-link" href="mailto:ugcjuzirl@outlook.com?subject=Review%20for%20Justin">Ask us to review this</a>
+            </div>
+          </article>
+
+          <article class="review-entry">
+            <div class="review-header">
+              <div>
+                <h3>Remedy Kombucha Pty Ltd</h3>
+                <p class="review-meta">Job ID 8211 • 10 Aug 2026</p>
+              </div>
+              <div class="review-stars" aria-label="Five star rating">★★★★★</div>
+            </div>
+
+            <p class="review-text">Thank you so much Justin, this was perfect!</p>
+
+            <div class="review-action">
+              <a class="review-link" href="mailto:ugcjuzirl@outlook.com?subject=Review%20for%20Justin">Ask us to review this</a>
+            </div>
+          </article>
+        </div>
       </div>
 
       <a href="#contact" class="section-arrow" aria-label="Scroll to next section"></a>
@@ -1073,6 +1135,18 @@
           links.addEventListener("click", (e) => {
             const target = e.target;
             if (target instanceof HTMLAnchorElement) links.setAttribute("data-open", "false");
+          });
+        }
+
+        // Each logo is listed once in the markup; a hidden copy makes the scroll loop seamless
+        const brandTrack = document.querySelector(".carousel-track");
+
+        if (brandTrack) {
+          Array.from(brandTrack.children).forEach((card) => {
+            const clone = card.cloneNode(true);
+            clone.setAttribute("aria-hidden", "true");
+            clone.classList.add("brand-card--clone");
+            brandTrack.appendChild(clone);
           });
         }
 
